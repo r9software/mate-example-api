@@ -6,23 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:layout_marginStart="@dimen/d16"
+        android:layout_marginTop="@dimen/d50"
+        android:layout_marginEnd="@dimen/d16"
+        android:hint="@string/search_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_first"
+    <TextView
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d16"
+        android:layout_marginTop="@dimen/d16"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/d16"
+        app:layout_constraintTop_toBottomOf="@id/search_text" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
